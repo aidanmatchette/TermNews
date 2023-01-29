@@ -2,10 +2,28 @@
 name = "cli-news"
 version = "0.1.0"
 edition = "2021"
+description = "terminal news app"
+
+[package.metadata.bundle]
+name = "TermNews"
+identifier = "com.aidanmatchette.termnews"
+version = "1.0.0"
+copyright = "Copyright (c) Jane Doe 2016. All rights reserved."
+category = "Developer Tool"
+short_description = "An example application."
+long_description = """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut
+enim ad minim veniam, quis nostrud exercitation ullamco laboris
+nisi ut aliquip ex ea commodo consequat.
+"""
+osx_url_schemes = ["com.aidanmatchette.termnews"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+crossterm = "0.20.0"
 dotenv = "0.15.0"
-colour = "0.6.0"
 newsapi = {path = "./newsapi/"}
+termimad = "0.14.2"
+
